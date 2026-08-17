@@ -1,0 +1,55 @@
+/**
+ * @file
+ *
+ * @author [cremaschi](https://vuo.org/user/599)
+ * @createdInVuoVersion 2.4.0
+ * @lastSavedInVuoVersion 2.4.0
+ * @copyright Copyright © 2022 [cremaschi](https://vuo.org/user/599)
+ * @see This is a Vuo Composition source code file.  See https://vuo.org for further information.
+ */
+
+digraph G
+{
+AllowFirstEvent2 [type="vuo.event.allowFirst" version="1.0.0" label="Allow First Event|<refresh>refresh\l|<event>event\l|<reset>reset\l|<firstEvent>firstEvent\r" pos="172,-93"];
+Curve [type="vuo.motion.curve.VuoReal" version="2.0.0" label="Curve|<refresh>refresh\l|<time>time\l|<startPosition>startPosition\l|<endPosition>endPosition\l|<duration>duration\l|<curve>curve\l|<easing>easing\l|<loop>loop\l|<phase>phase\l|<value>value\r" pos="384,751" _endPosition="1." _duration="10.0" _curve="\"cubic\"" _easing="\"in\"" _loop="\"none\"" _phase="0.0"];
+HoldValue [type="vuo.data.hold2.VuoInteger" version="3.0.0" label="width|<refresh>refresh\l|<update>update\l|<value>value\l|<heldValue>heldValue\r" pos="407,35"];
+HoldValue2 [type="vuo.data.hold2.VuoInteger" version="3.0.0" label="height|<refresh>refresh\l|<update>update\l|<value>value\l|<heldValue>heldValue\r" pos="405,-55"];
+MakeList [type="vuo.list.make.2.VuoSceneObject" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="122,295"];
+MakeUnlit3DObjectFromImage2 [type="vuo.scene.make.image.unlit" version="2.1.0" label="Make Unlit 3D Object from Image|<refresh>refresh\l|<image>image\l|<center>center\l|<rotation>rotation\l|<width>width\l|<fixed>fixed\l|<opacity>opacity\l|<object>object\r" pos="1627,35" _center="\{\"x\":0.0,\"y\":0.0,\"z\":0.0\}" _rotation="\{\"x\":0.0,\"y\":0.0,\"z\":0.0\}" _width="2.0" _fixed="\"horizontal\"" _opacity="1.0"];
+MeasureTime [type="vuo.time.measureTime" version="2.0.1" label="Measure Time|<refresh>refresh\l|<time>time\l|<start>start\l|<pause>pause\l|<reset>reset\l|<elapsedTime>elapsedTime\r" pos="220,124"];
+RenderSceneToImage [type="vuo.scene.render.image2" version="2.0.0" label="Render Scene to Image|<refresh>refresh\l|<objects>objects\l|<width>width\l|<height>height\l|<colorDepth>colorDepth\l|<multisampling>multisampling\l|<cameraName>cameraName\l|<image>image\r|<depthImage>depthImage\r" pos="183,284" _colorDepth="\"8bpc\"" _multisampling="\"4\""];
+SelectInput [type="vuo.select.in.boolean.VuoSceneObject" version="2.0.0" label="Select Input|<refresh>refresh\l|<which>which\l|<falseOption>falseOption\l|<trueOption>trueOption\l|<out>out\r" pos="1450,-147"];
+SelectInput2 [type="vuo.select.in.boolean.VuoReal" version="2.0.0" label="Select Input|<refresh>refresh\l|<which>which\l|<falseOption>falseOption\l|<trueOption>trueOption\l|<out>out\r" pos="828,-32"];
+SelectLatest2 [type="vuo.select.latest.2.VuoReal" version="1.0.0" label="Select Latest|<refresh>refresh\l|<option1>option1\l|<option2>option2\l|<latest>latest\r" pos="555,482"];
+Switch [type="vuo.logic.switch" version="1.0.0" label="Switch|<refresh>refresh\l|<toggle>toggle\l|<turnOn>turnOn\l|<turnOff>turnOff\l|<value>value\r" pos="1203,-206"];
+TwirlImage [type="vuo.image.twirl2" version="3.0.0" label="Twirl Image|<refresh>refresh\l|<image>image\l|<center>center\l|<angle>angle\l|<radius>radius\l|<twirledImage>twirledImage\r" pos="751,343" _center="\{\"x\":0,\"y\":0\}" _angle="360.0"];
+PublishedInputs [type="vuo.in" label="PublishedInputs|<Time>Time\r|<SceneObject>SceneObject\r|<Start>Start\r|<Width>Width\r|<Height>Height\r" _Time_type="VuoReal" _Time="0.0" _SceneObject_type="VuoSceneObject" _Start_type="event" _Width_type="VuoInteger" _Width_suggestedMin="1" _Width_suggestedMax="4096" _Width_suggestedStep="256" _Width="1680" _Height_type="VuoInteger" _Height_suggestedMin="1" _Height_suggestedMax="4096" _Height_suggestedStep="256" _Height="1050"];
+PublishedOutputs [type="vuo.out" label="PublishedOutputs|<Object>Object\l|<BlendedImage>BlendedImage\l" _Object_type="VuoSceneObject" _BlendedImage_type="VuoImage"];
+
+AllowFirstEvent2:firstEvent -> HoldValue2:update;
+AllowFirstEvent2:firstEvent -> HoldValue:update;
+AllowFirstEvent2:firstEvent -> SelectLatest2:option1;
+Curve:value -> SelectLatest2:option2;
+MakeList:list -> RenderSceneToImage:objects;
+MakeUnlit3DObjectFromImage2:object -> SelectInput:trueOption;
+MeasureTime:elapsedTime -> Curve:time;
+PublishedInputs:Height -> HoldValue2:value;
+PublishedInputs:Height -> RenderSceneToImage:height;
+PublishedInputs:SceneObject -> MakeList:1;
+PublishedInputs:SceneObject -> SelectInput:falseOption;
+PublishedInputs:Start -> MeasureTime:reset;
+PublishedInputs:Start -> MeasureTime:start;
+PublishedInputs:Start -> Switch:turnOn;
+PublishedInputs:Time -> AllowFirstEvent2:event;
+PublishedInputs:Time -> SelectInput2:trueOption;
+PublishedInputs:Width -> HoldValue:value;
+PublishedInputs:Width -> RenderSceneToImage:width;
+RenderSceneToImage:image -> TwirlImage:image;
+SelectInput2:out -> MeasureTime:time;
+SelectInput:out -> PublishedOutputs:Object;
+SelectLatest2:latest -> TwirlImage:radius;
+Switch:value -> SelectInput2:which;
+Switch:value -> SelectInput:which;
+TwirlImage:twirledImage -> MakeUnlit3DObjectFromImage2:image;
+TwirlImage:twirledImage -> PublishedOutputs:BlendedImage;
+}

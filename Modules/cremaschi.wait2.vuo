@@ -1,0 +1,32 @@
+/**
+ * @file
+ * @brief wait2
+ *
+ * @author [cremaschi](https://vuo.org/user/599)
+ * @createdInVuoVersion 2.3.2
+ * @lastSavedInVuoVersion 2.3.2
+ * @copyright Copyright © 2021 [cremaschi](https://vuo.org/user/599)
+ * @see This is a Vuo Composition source code file.  See https://vuo.org for further information.
+ */
+
+digraph G
+{
+BecameTrue2 [type="vuo.event.becameTrue" version="1.0.0" label="Became True|<refresh>refresh\l|<value>value\l|<becameTrue>becameTrue\r" pos="835,36" fillcolor="yellow"];
+FireOnDisplayRefresh [type="vuo.event.fireOnDisplayRefresh" version="1.0.0" label="Fire on Display Refresh|<refresh>refresh\l|<requestedFrame>requestedFrame\r" pos="224,141" _requestedFrame_eventThrottling="drop"];
+HoldValue [type="vuo.data.hold2.VuoReal" version="3.0.0" label="Hold Value|<refresh>refresh\l|<update>update\l|<value>value\l|<heldValue>heldValue\r" pos="429,41"];
+IsGreaterThan3 [type="vuo.data.isGreaterThan.VuoReal" version="1.0.0" label="Is Greater Than|<refresh>refresh\l|<a>a\l|<b>b\l|<greaterThan>greaterThan\r" pos="639,30" fillcolor="magenta"];
+MeasureTime [type="vuo.time.measureTime" version="2.0.1" label="Measure Time|<refresh>refresh\l|<time>time\l|<start>start\l|<pause>pause\l|<reset>reset\l|<elapsedTime>elapsedTime\r" pos="444,145"];
+PublishedInputs [type="vuo.in" label="PublishedInputs|<Start>Start\r|<SecondsDelay>SecondsDelay\r" _Start_type="event" _SecondsDelay_type="VuoReal" _SecondsDelay="2.0"];
+PublishedOutputs [type="vuo.out" label="PublishedOutputs|<BecameTrue>BecameTrue\l" _BecameTrue_type="event"];
+
+BecameTrue2:becameTrue -> MeasureTime:pause;
+BecameTrue2:becameTrue -> PublishedOutputs:BecameTrue;
+FireOnDisplayRefresh:requestedFrame -> MeasureTime:time;
+HoldValue:heldValue -> IsGreaterThan3:b;
+IsGreaterThan3:greaterThan -> BecameTrue2:value;
+MeasureTime:elapsedTime -> HoldValue:update;
+MeasureTime:elapsedTime -> IsGreaterThan3:a;
+PublishedInputs:SecondsDelay -> HoldValue:value;
+PublishedInputs:Start -> MeasureTime:reset;
+PublishedInputs:Start -> MeasureTime:start;
+}

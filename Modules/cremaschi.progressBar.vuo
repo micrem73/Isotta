@@ -1,0 +1,93 @@
+/**
+ * @file
+ * @brief ProgressBar
+ *
+ * @author [cremaschi](https://vuo.org/user/599)
+ * @createdInVuoVersion 2.4.2
+ * @lastSavedInVuoVersion 2.4.2
+ * @copyright Copyright © 2023 [cremaschi](https://vuo.org/user/599)
+ * @see This is a Vuo Composition source code file.  See https://vuo.org for further information.
+ */
+
+digraph G
+{
+Calculate [type="vuo.math.calculate" version="1.0.0" label="Calculate|<refresh>refresh\l|<expression>expression\l|<values>values\l|<result>result\r" pos="60,420" _expression="\{\"expressions\":[\"A - (2* border)\"],\"inputVariables\":[\"A\",\"border\"],\"outputVariables\":[\"result\"]\}"];
+Calculate2 [type="vuo.math.calculate" version="1.0.0" label="Calculate|<refresh>refresh\l|<expression>expression\l|<values>values\l|<result>result\r" pos="-90,600" _expression="\{\"expressions\":[\"(width)-(2*border)\"],\"inputVariables\":[\"border\",\"width\"],\"outputVariables\":[\"result\"]\}"];
+Calculate3 [type="vuo.math.calculate" version="1.0.0" label="Calculate|<refresh>refresh\l|<expression>expression\l|<values>values\l|<result>result\r" pos="-195,450" _expression="\{\"expressions\":[\"(a*width)-(2*border)\"],\"inputVariables\":[\"a\",\"border\",\"width\"],\"outputVariables\":[\"result\"]\}"];
+Calculate4 [type="vuo.math.calculate" version="1.0.0" label="Calculate|<refresh>refresh\l|<expression>expression\l|<values>values\l|<result>result\r" pos="-105,45" _expression="\{\"expressions\":[\"centerY - (width\\/2) + border\"],\"inputVariables\":[\"border\",\"centerY\",\"width\"],\"outputVariables\":[\"result\"]\}"];
+CombineLayers [type="vuo.layer.combine.group" version="1.0.0" label="Combine Layers|<refresh>refresh\l|<layers>layers\l|<combinedLayer>combinedLayer\r" pos="585,330"];
+Convert2DPointToReal [type="vuo.type.point2d.real.x" version="1.0.1" label="Convert 2D Point to Real|<refresh>refresh\l|<xy>xy\l|<x>x\r" pos="120,180"];
+Convert2DPointToReal2 [type="vuo.type.point2d.real.y" version="1.0.1" label="Convert 2D Point to Real|<refresh>refresh\l|<xy>xy\l|<y>y\r" pos="345,165"];
+Make2DPoint [type="vuo.point.make.VuoPoint2d" version="2.0.0" label="Make 2D Point|<refresh>refresh\l|<x>x\l|<y>y\l|<point>point\r" pos="90,45"];
+MakeDictionary [type="vuo.dictionary.make.VuoText.VuoReal" version="1.0.0" label="Make Dictionary|<refresh>refresh\l|<keys>keys\l|<values>values\l|<dictionary>dictionary\r" pos="-165,465"];
+MakeDictionary2 [type="vuo.dictionary.make.VuoText.VuoReal" version="1.0.0" label="Make Dictionary|<refresh>refresh\l|<keys>keys\l|<values>values\l|<dictionary>dictionary\r" pos="-315,585"];
+MakeDictionary3 [type="vuo.dictionary.make.VuoText.VuoReal" version="1.0.0" label="Make Dictionary|<refresh>refresh\l|<keys>keys\l|<values>values\l|<dictionary>dictionary\r" pos="-435,330"];
+MakeDictionary4 [type="vuo.dictionary.make.VuoText.VuoReal" version="1.0.0" label="Make Dictionary|<refresh>refresh\l|<keys>keys\l|<values>values\l|<dictionary>dictionary\r" pos="-195,90"];
+MakeList [type="vuo.list.make.2.VuoReal" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="5,446"];
+MakeList10 [type="vuo.list.make.3.VuoReal" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<3>3\l|<list>list\r" pos="-165,71"];
+MakeList11 [type="vuo.list.make.3.VuoText" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<3>3\l|<list>list\r" pos="-195,90" _1="\"border\"" _2="\"centerY\"" _3="\"width\""];
+MakeList2 [type="vuo.list.make.2.VuoText" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="-165,465" _1="\"A\"" _2="\"border\""];
+MakeList3 [type="vuo.list.make.2.VuoReal" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="-145,626"];
+MakeList4 [type="vuo.list.make.2.VuoText" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="-315,585" _1="\"border\"" _2="\"width\""];
+MakeList5 [type="vuo.list.make.3.VuoReal" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<3>3\l|<list>list\r" pos="-250,476"];
+MakeList6 [type="vuo.list.make.3.VuoText" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<3>3\l|<list>list\r" pos="-435,330" _1="\"a\"" _2="\"border\"" _3="\"width\""];
+MakeList7 [type="vuo.list.make.3.VuoLayer" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<3>3\l|<list>list\r" pos="552,341"];
+MakeRectangleLayer [type="vuo.layer.make.rect" version="1.0.0" label="barra variabile|<refresh>refresh\l|<color>color\l|<anchor>anchor\l|<center>center\l|<rotation>rotation\l|<width>width\l|<height>height\l|<sharpness>sharpness\l|<roundness>roundness\l|<opacity>opacity\l|<layer>layer\r" pos="345,315" _color="\{\"r\":1.0,\"g\":1.0,\"b\":1.0,\"a\":1.0\}" _anchor="\"left-center\"" _rotation="0.0" _sharpness="1.0" _roundness="0.0" _opacity="1.0"];
+MakeRectangleLayer2 [type="vuo.layer.make.rect" version="1.0.0" label="bordo|<refresh>refresh\l|<color>color\l|<anchor>anchor\l|<center>center\l|<rotation>rotation\l|<width>width\l|<height>height\l|<sharpness>sharpness\l|<roundness>roundness\l|<opacity>opacity\l|<layer>layer\r" pos="345,105" _color="\{\"r\":1,\"g\":1,\"b\":1,\"a\":1\}" _anchor="\{\"horizontalAlignment\":\"center\",\"verticalAlignment\":\"center\"\}" _rotation="0.0" _sharpness="1.0" _roundness="0.0" _opacity="1.0"];
+MakeRectangleLayer3 [type="vuo.layer.make.rect" version="1.0.0" label="interno|<refresh>refresh\l|<color>color\l|<anchor>anchor\l|<center>center\l|<rotation>rotation\l|<width>width\l|<height>height\l|<sharpness>sharpness\l|<roundness>roundness\l|<opacity>opacity\l|<layer>layer\r" pos="345,525" _color="\{\"r\":0.0,\"g\":0.0,\"b\":0.0,\"a\":1.0\}" _anchor="\{\"horizontalAlignment\":\"center\",\"verticalAlignment\":\"center\"\}" _rotation="0.0" _sharpness="1.0" _roundness="0.0" _opacity="1.0"];
+ShareValue [type="vuo.data.share.VuoReal" version="1.0.0" label="height|<refresh>refresh\l|<value>value\l|<sameValue>sameValue\r" pos="-435,120"];
+ShareValue2 [type="vuo.data.share.VuoReal" version="1.0.0" label="width|<refresh>refresh\l|<value>value\l|<sameValue>sameValue\r" pos="-420,330"];
+ShareValue3 [type="vuo.data.share.VuoReal" version="1.0.0" label="bordersize|<refresh>refresh\l|<value>value\l|<sameValue>sameValue\r" pos="-435,210"];
+ShareValue4 [type="vuo.data.share.VuoPoint2d" version="1.0.0" label="Share Value|<refresh>refresh\l|<value>value\l|<sameValue>sameValue\r" pos="-405,45"];
+PublishedInputs [type="vuo.in" label="PublishedInputs|<Amount>Amount\r|<Center>Center\r|<Width>Width\r|<Height>Height\r|<Bordersize>Bordersize\r" _Amount_type="VuoReal" _Amount="0.0" _Center_type="VuoPoint2d" _Center="\{\"x\":0.0,\"y\":0.0\}" _Width_type="VuoReal" _Width="1.5" _Height_type="VuoReal" _Height="0.050000000000000003" _Bordersize_type="VuoReal" _Bordersize="0.0050000000000000001"];
+PublishedOutputs [type="vuo.out" label="PublishedOutputs|<CombinedLayer>CombinedLayer\l" _CombinedLayer_type="VuoLayer"];
+
+Calculate2:result -> MakeRectangleLayer3:width;
+Calculate3:result -> MakeRectangleLayer:width;
+Calculate4:result -> Make2DPoint:x;
+Calculate:result -> MakeRectangleLayer3:height;
+Calculate:result -> MakeRectangleLayer:height;
+CombineLayers:combinedLayer -> PublishedOutputs:CombinedLayer;
+Convert2DPointToReal2:y -> Make2DPoint:y;
+Convert2DPointToReal:x -> MakeList10:2;
+Make2DPoint:point -> MakeRectangleLayer:center;
+MakeDictionary2:dictionary -> Calculate2:values;
+MakeDictionary3:dictionary -> Calculate3:values;
+MakeDictionary4:dictionary -> Calculate4:values;
+MakeDictionary:dictionary -> Calculate:values;
+MakeList10:list -> MakeDictionary4:values;
+MakeList11:list -> MakeDictionary4:keys;
+MakeList2:list -> MakeDictionary:keys;
+MakeList3:list -> MakeDictionary2:values;
+MakeList4:list -> MakeDictionary2:keys;
+MakeList5:list -> MakeDictionary3:values;
+MakeList6:list -> MakeDictionary3:keys;
+MakeList7:list -> CombineLayers:layers;
+MakeList:list -> MakeDictionary:values;
+MakeRectangleLayer2:layer -> MakeList7:1;
+MakeRectangleLayer3:layer -> MakeList7:2;
+MakeRectangleLayer:layer -> MakeList7:3;
+PublishedInputs:Amount -> MakeList5:1;
+PublishedInputs:Amount -> ShareValue2:value [event=true];
+PublishedInputs:Amount -> ShareValue3:value [event=true];
+PublishedInputs:Amount -> ShareValue4:value [event=true];
+PublishedInputs:Amount -> ShareValue:value [event=true];
+PublishedInputs:Bordersize -> ShareValue3:value;
+PublishedInputs:Center -> ShareValue4:value;
+PublishedInputs:Height -> ShareValue:value;
+PublishedInputs:Width -> ShareValue2:value;
+ShareValue2:sameValue -> MakeList10:3;
+ShareValue2:sameValue -> MakeList3:2;
+ShareValue2:sameValue -> MakeList5:3;
+ShareValue2:sameValue -> MakeRectangleLayer2:width;
+ShareValue3:sameValue -> MakeList10:1;
+ShareValue3:sameValue -> MakeList3:1;
+ShareValue3:sameValue -> MakeList5:2;
+ShareValue3:sameValue -> MakeList:2;
+ShareValue4:sameValue -> Convert2DPointToReal2:xy;
+ShareValue4:sameValue -> Convert2DPointToReal:xy;
+ShareValue4:sameValue -> MakeRectangleLayer2:center;
+ShareValue4:sameValue -> MakeRectangleLayer3:center;
+ShareValue:sameValue -> MakeList:1;
+ShareValue:sameValue -> MakeRectangleLayer2:height;
+}

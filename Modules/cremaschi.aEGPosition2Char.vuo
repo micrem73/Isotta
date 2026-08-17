@@ -1,0 +1,29 @@
+/**
+ * @file
+ * @brief AEGPosition2Char
+ *
+ * @author [cremaschi](https://vuo.org/user/599)
+ * @createdInVuoVersion 2.4.0
+ * @lastSavedInVuoVersion 2.4.0
+ * @copyright Copyright © 2022 [cremaschi](https://vuo.org/user/599)
+ * @see This is a Vuo Composition source code file.  See https://vuo.org for further information.
+ */
+
+digraph G
+{
+ActualX2 [type="vuo.data.hold2.VuoGenericType1" version="3.0.0" label="Actual Yindex|<refresh>refresh\l|<update>update\l|<value>value\l|<heldValue>heldValue\r" pos="720,292"];
+HoldList [type="vuo.data.hold.list2.VuoInteger" version="2.0.0" label="X|<refresh>refresh\l|<update>update\l|<value>value\l|<heldValue>heldValue\r" pos="-38,129"];
+HoldList2 [type="vuo.data.hold.list2.VuoInteger" version="2.0.0" label="Y|<refresh>refresh\l|<update>update\l|<value>value\l|<heldValue>heldValue\r" pos="-40,212"];
+HoldValue [type="vuo.data.hold2.VuoText" version="3.0.0" label="CharOut|<refresh>refresh\l|<update>update\l|<value>value\l|<heldValue>heldValue\r" pos="1166,120"];
+HoldValue2 [type="vuo.data.hold2.VuoGenericType1" version="3.0.0" label="Actual Xindex|<refresh>refresh\l|<update>update\l|<value>value\l|<heldValue>heldValue\r" pos="718,221"];
+PublishedInputs [type="vuo.in" label="PublishedInputs|<XList>XList\r|<YList>YList\r|<X>X\r|<Y>Y\r" _XList_type="VuoList_VuoInteger" _YList_type="VuoList_VuoInteger" _X_type="VuoInteger" _Y_type="VuoInteger"];
+PublishedOutputs [type="vuo.out" label="PublishedOutputs|<CharOut>CharOut\l" _CharOut_type="VuoText"];
+
+HoldValue:heldValue -> PublishedOutputs:CharOut;
+PublishedInputs:X -> HoldList2:update;
+PublishedInputs:X -> HoldList:update;
+PublishedInputs:XList -> HoldList:value;
+PublishedInputs:Y -> HoldList2:update;
+PublishedInputs:Y -> HoldList:update;
+PublishedInputs:YList -> HoldList2:value;
+}

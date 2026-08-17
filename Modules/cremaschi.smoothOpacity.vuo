@@ -1,0 +1,86 @@
+/**
+ * @file
+ * @brief SmoothOpacity
+ *
+ * @author [cremaschi](https://vuo.org/user/599)
+ * @createdInVuoVersion 2.4.0
+ * @lastSavedInVuoVersion 2.4.1
+ * @copyright Copyright © 2022 [cremaschi](https://vuo.org/user/599)
+ * @see This is a Vuo Composition source code file.  See https://vuo.org for further information.
+ */
+
+digraph G
+{
+AllowChanges2 [type="vuo.event.allowChanges2.VuoReal" version="2.0.0" label="Allow Changes|<refresh>refresh\l|<value>value\l|<changedValue>changedValue\r" pos="910,-143"];
+AllowChanges3 [type="vuo.event.allowChanges2.VuoReal" version="2.0.0" label="Allow Changes|<refresh>refresh\l|<value>value\l|<changedValue>changedValue\r" pos="803,479"];
+AllowFirstEvent3 [type="vuo.event.allowFirst" version="1.0.0" label="Allow First Event|<refresh>refresh\l|<event>event\l|<reset>reset\l|<firstEvent>firstEvent\r" pos="218,320"];
+AllowFirstEvent5 [type="vuo.event.allowFirst" version="1.0.0" label="NON ARRIVANO IMMAGINI|<refresh>refresh\l|<event>event\l|<reset>reset\l|<firstEvent>firstEvent\r" pos="334,19"];
+Calculate [type="vuo.math.calculate" version="1.0.0" label="Calculate|<refresh>refresh\l|<expression>expression\l|<values>values\l|<result>result\r" pos="549,-200" _expression="\{\"expressions\":[\"a-b-delay+1\"],\"inputVariables\":[\"a\",\"b\",\"delay\"],\"outputVariables\":[\"result\"]\}"];
+Calculate2 [type="vuo.math.calculate" version="1.0.0" label="Calculate|<refresh>refresh\l|<expression>expression\l|<values>values\l|<result>result\r" pos="394,448" _expression="\{\"expressions\":[\"a-b\"],\"inputVariables\":[\"a\",\"b\"],\"outputVariables\":[\"result\"]\}"];
+Calculate3 [type="vuo.math.calculate" version="1.0.0" label="Calculate|<refresh>refresh\l|<expression>expression\l|<values>values\l|<result>result\r" pos="727,-389" _expression="\{\"expressions\":[\"a-b-delay\"],\"inputVariables\":[\"a\",\"b\",\"delay\"],\"outputVariables\":[\"result\"]\}"];
+HoldValue [type="vuo.data.hold2.VuoReal" version="3.0.0" label="Hold Value|<refresh>refresh\l|<update>update\l|<value>value\l|<heldValue>heldValue\r" pos="622,81"];
+HoldValue2 [type="vuo.data.hold2.VuoReal" version="3.0.0" label="Hold Value|<refresh>refresh\l|<update>update\l|<value>value\l|<heldValue>heldValue\r" pos="187,477"];
+HoldValue3 [type="vuo.data.hold2.VuoReal" version="3.0.0" label="Hold Value|<refresh>refresh\l|<update>update\l|<value>value\l|<heldValue>heldValue\r" pos="272,-115"];
+HoldValue4 [type="vuo.data.hold2.VuoReal" version="3.0.0" label="Hold Value|<refresh>refresh\l|<update>update\l|<value>value\l|<heldValue>heldValue\r" pos="622,210"];
+MakeDictionary [type="vuo.dictionary.make.VuoText.VuoReal" version="1.0.0" label="Make Dictionary|<refresh>refresh\l|<keys>keys\l|<values>values\l|<dictionary>dictionary\r" pos="292,-129"];
+MakeDictionary2 [type="vuo.dictionary.make.VuoText.VuoReal" version="1.0.0" label="Make Dictionary|<refresh>refresh\l|<keys>keys\l|<values>values\l|<dictionary>dictionary\r" pos="461,578"];
+MakeDictionary3 [type="vuo.dictionary.make.VuoText.VuoReal" version="1.0.0" label="Make Dictionary|<refresh>refresh\l|<keys>keys\l|<values>values\l|<dictionary>dictionary\r" pos="469,-309"];
+MakeList [type="vuo.list.make.3.VuoText" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<3>3\l|<list>list\r" pos="292,-129" _1="\"a\"" _2="\"b\"" _3="\"delay\""];
+MakeList2 [type="vuo.list.make.3.VuoReal" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<3>3\l|<list>list\r" pos="499,-174"];
+MakeList3 [type="vuo.list.make.2.VuoText" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="461,578" _1="\"a\"" _2="\"b\""];
+MakeList4 [type="vuo.list.make.2.VuoReal" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="361,474"];
+MakeList5 [type="vuo.list.make.3.VuoText" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<3>3\l|<list>list\r" pos="469,-309" _1="\"a\"" _2="\"b\"" _3="\"delay\""];
+MakeList6 [type="vuo.list.make.3.VuoReal" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<3>3\l|<list>list\r" pos="677,-363"];
+Round [type="vuo.math.round" version="2.0.0" label="Round|<refresh>refresh\l|<real>real\l|<rounded>rounded\r" pos="1154,-202"];
+Round3 [type="vuo.math.round" version="2.0.0" label="Round|<refresh>refresh\l|<real>real\l|<rounded>rounded\r" pos="1149,-267"];
+SelectEventInput [type="vuo.select.in.event2.2" version="3.0.0" label="Select Event Input|<refresh>refresh\l|<which>which\l|<option1>option1\l|<option2>option2\l|<out>out\r" pos="994,-388"];
+SelectInput2 [type="vuo.select.in.2.VuoReal" version="2.0.0" label="Select Input|<refresh>refresh\l|<which>which\l|<option1>option1\l|<option2>option2\l|<out>out\r" pos="1083,-263"];
+SelectLatest [type="vuo.select.latest.2.VuoReal" version="1.0.0" label="Select Latest|<refresh>refresh\l|<option1>option1\l|<option2>option2\l|<latest>latest\r" pos="881,31"];
+SmoothWithInertia [type="vuo.motion.smooth.inertia.VuoReal" version="1.1.0" label="Smooth with Inertia|<refresh>refresh\l|<time>time\l|<setPosition>setPosition\l|<setTarget>setTarget\l|<duration>duration\l|<position>position\r|<reachedTarget>reachedTarget\r" pos="635,-51" _setPosition="1.0" _setTarget="0.0" _duration="1."];
+SmoothWithInertia2 [type="vuo.motion.smooth.inertia.VuoReal" version="1.1.0" label="Smooth with Inertia|<refresh>refresh\l|<time>time\l|<setPosition>setPosition\l|<setTarget>setTarget\l|<duration>duration\l|<position>position\r|<reachedTarget>reachedTarget\r" pos="646,301" _setPosition="0." _setTarget="1.0" _duration="1."];
+PublishedInputs [type="vuo.in" label="PublishedInputs|<time>time\r|<Image>Image\r|<delay>delay\r" _time_type="VuoReal" _Image_type="VuoImage" _delay_type="VuoReal"];
+PublishedOutputs [type="vuo.out" label="PublishedOutputs|<opacity>opacity\l" _opacity_type="VuoReal"];
+
+AllowChanges2:changedValue -> SmoothWithInertia:time;
+AllowChanges3:changedValue -> SmoothWithInertia2:time;
+AllowFirstEvent3:firstEvent -> HoldValue2:update;
+AllowFirstEvent3:firstEvent -> HoldValue4:update;
+AllowFirstEvent3:firstEvent -> SmoothWithInertia2:setTarget;
+AllowFirstEvent5:firstEvent -> HoldValue:update;
+AllowFirstEvent5:firstEvent -> SmoothWithInertia:setTarget;
+Calculate2:result -> AllowChanges3:value;
+Calculate3:result -> SelectEventInput:option2;
+Calculate3:result -> SelectInput2:option2;
+Calculate:result -> Round3:real;
+Calculate:result -> Round:real;
+HoldValue2:heldValue -> MakeList4:2;
+HoldValue3:heldValue -> MakeList2:2;
+HoldValue3:heldValue -> MakeList6:2;
+MakeDictionary2:dictionary -> Calculate2:values;
+MakeDictionary3:dictionary -> Calculate3:values;
+MakeDictionary:dictionary -> Calculate:values;
+MakeList2:list -> MakeDictionary:values;
+MakeList3:list -> MakeDictionary2:keys;
+MakeList4:list -> MakeDictionary2:values;
+MakeList5:list -> MakeDictionary3:keys;
+MakeList6:list -> MakeDictionary3:values;
+MakeList:list -> MakeDictionary:keys;
+PublishedInputs:Image -> AllowFirstEvent3:event;
+PublishedInputs:Image -> AllowFirstEvent5:reset;
+PublishedInputs:Image -> HoldValue3:update;
+PublishedInputs:delay -> MakeList2:3;
+PublishedInputs:time -> HoldValue2:value;
+PublishedInputs:time -> HoldValue3:value;
+PublishedInputs:time -> MakeList2:1;
+PublishedInputs:time -> MakeList4:1;
+PublishedInputs:time -> MakeList6:1;
+Round3:rounded -> SelectEventInput:which;
+Round:rounded -> SelectInput2:which;
+SelectEventInput:out -> AllowFirstEvent5:event;
+SelectInput2:out -> AllowChanges2:value;
+SelectLatest:latest -> PublishedOutputs:opacity;
+SmoothWithInertia2:position -> HoldValue:value;
+SmoothWithInertia2:position -> SelectLatest:option2;
+SmoothWithInertia:position -> HoldValue4:value;
+SmoothWithInertia:position -> SelectLatest:option1;
+}

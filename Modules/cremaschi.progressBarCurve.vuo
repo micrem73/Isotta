@@ -1,0 +1,83 @@
+/**
+ * @file
+ * @brief ProgressBarCurve
+ *
+ * @author [cremaschi](https://vuo.org/user/599)
+ * @createdInVuoVersion 2.4.2
+ * @lastSavedInVuoVersion 2.4.2
+ * @copyright Copyright © 2023 [cremaschi](https://vuo.org/user/599)
+ * @see This is a Vuo Composition source code file.  See https://vuo.org for further information.
+ */
+
+digraph G
+{
+AllowChanges [type="vuo.event.allowChanges2.VuoReal" version="2.0.0" label="Allow Changes|<refresh>refresh\l|<value>value\l|<changedValue>changedValue\r" pos="1110,15"];
+AllowFirstEvent [type="vuo.event.allowFirst" version="1.0.0" label="Allow First Event|<refresh>refresh\l|<event>event\l|<reset>reset\l|<firstEvent>firstEvent\r" pos="1245,390"];
+AreEqual [type="vuo.math.areEqual.VuoReal" version="2.1.0" label="Are Equal|<refresh>refresh\l|<values>values\l|<tolerance>tolerance\l|<equal>equal\r" pos="1020,330" _tolerance="0.00001"];
+Calculate [type="vuo.math.calculate" version="1.0.0" label="Calculate|<refresh>refresh\l|<expression>expression\l|<values>values\l|<result>result\r" pos="480,600" _expression="\{\"expressions\":[\"count\<decrement?count:decrement\"],\"inputVariables\":[\"count\",\"decrement\"],\"outputVariables\":[\"result\"]\}"];
+ChangeSpeed [type="vuo.time.changeSpeed" version="1.0.0" label="Change Speed|<refresh>refresh\l|<time>time\l|<speed>speed\l|<reset>reset\l|<changedTime>changedTime\r" pos="690,180"];
+Count [type="vuo.math.count.VuoReal" version="1.0.1" label="phase|<refresh>refresh\l|<increment>increment\l|<decrement>decrement\l|<setCount>setCount\l|<count>count\r" pos="660,510" _decrement="1.0" _setCount="0.0"];
+Count4 [type="vuo.math.count.VuoReal" version="1.0.1" label="speed|<refresh>refresh\l|<increment>increment\l|<decrement>decrement\l|<setCount>setCount\l|<count>count\r" pos="330,75" _decrement="1.0" _setCount="1.0"];
+Curve [type="vuo.motion.curve.VuoReal" version="2.0.0" label="Curve|<refresh>refresh\l|<time>time\l|<startPosition>startPosition\l|<endPosition>endPosition\l|<duration>duration\l|<curve>curve\l|<easing>easing\l|<loop>loop\l|<phase>phase\l|<value>value\r" pos="780,315" _endPosition="1." _curve="\"linear\"" _easing="\"in\"" _loop="\"none\""];
+HoldValue [type="vuo.data.hold2.VuoReal" version="3.0.0" label="Hold Value|<refresh>refresh\l|<update>update\l|<value>value\l|<heldValue>heldValue\r" pos="420,480"];
+HoldValue2 [type="vuo.data.hold2.VuoReal" version="3.0.0" label="Hold Value|<refresh>refresh\l|<update>update\l|<value>value\l|<heldValue>heldValue\r" pos="285,660"];
+HoldValue3 [type="vuo.data.hold2.VuoReal" version="3.0.0" label="Hold Value|<refresh>refresh\l|<update>update\l|<value>value\l|<heldValue>heldValue\r" pos="210,60" _value="2.0"];
+MakeDictionary [type="vuo.dictionary.make.VuoText.VuoReal" version="1.0.0" label="Make Dictionary|<refresh>refresh\l|<keys>keys\l|<values>values\l|<dictionary>dictionary\r" pos="255,645"];
+MakeList2 [type="vuo.list.make.2.VuoReal" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="955,341" _2="1.0"];
+MakeList3 [type="vuo.list.make.2.VuoReal" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="407,626"];
+MakeList4 [type="vuo.list.make.2.VuoText" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="255,645" _1="\"count\"" _2="\"decrement\""];
+MeasureTime2 [type="vuo.time.measureTime" version="2.0.1" label="Measure Time|<refresh>refresh\l|<time>time\l|<start>start\l|<pause>pause\l|<reset>reset\l|<elapsedTime>elapsedTime\r" pos="585,45"];
+RoundUp [type="vuo.math.roundUp" version="2.0.0" label="Round Up|<refresh>refresh\l|<real>real\l|<roundedUp>roundedUp\r" pos="1035,120"];
+SelectEventOutput2 [type="vuo.select.out.boolean.event" version="2.0.0" label="Select Event Output|<refresh>refresh\l|<which>which\l|<in>in\l|<falseOption>falseOption\r|<trueOption>trueOption\r" pos="1005,420"];
+SelectInput [type="vuo.select.in.2.VuoReal" version="2.0.0" label="Select Input|<refresh>refresh\l|<which>which\l|<option1>option1\l|<option2>option2\l|<out>out\r" pos="945,15" _option2="1.0"];
+ShareEvent [type="vuo.event.share" version="1.0.0" label="Jump|<refresh>refresh\l|<event>event\l|<sameEvent>sameEvent\r" pos="150,450"];
+ShareEvent2 [type="vuo.event.share" version="1.0.0" label="reset|<refresh>refresh\l|<event>event\l|<sameEvent>sameEvent\r" pos="210,240" _event_manuallyFirable="yes"];
+ShareEvent4 [type="vuo.event.share" version="1.0.0" label="start|<refresh>refresh\l|<event>event\l|<sameEvent>sameEvent\r" pos="150,-45"];
+ShareValue [type="vuo.data.share.VuoReal" version="1.0.0" label="duration|<refresh>refresh\l|<value>value\l|<sameValue>sameValue\r" pos="195,375"];
+Start2 [type="vuo.event.share" version="1.0.0" label="pause|<refresh>refresh\l|<event>event\l|<sameEvent>sameEvent\r" pos="165,150"];
+PublishedInputs [type="vuo.in" label="PublishedInputs|<Time>Time\r|<Start>Start\r|<Pause>Pause\r|<Reset>Reset\r|<Duration>Duration\r|<Speed>Speed\r|<Jump>Jump\r|<JumpHowMuch>JumpHowMuch\r" _Time_type="VuoReal" _Time="0.0" _Start_type="event" _Pause_type="event" _Reset_type="event" _Duration_type="VuoReal" _Duration="20.0" _Speed_type="VuoReal" _Speed_suggestedMin="-4" _Speed_suggestedMax="4" _Speed="0.10000000000000001" _Jump_type="event" _JumpHowMuch_type="VuoReal" _JumpHowMuch="0.10000000000000001"];
+PublishedOutputs [type="vuo.out" label="PublishedOutputs|<Value>Value\l|<End>End\l" _Value_type="VuoReal" _End_type="event"];
+
+AllowChanges:changedValue -> PublishedOutputs:Value;
+AllowFirstEvent:firstEvent -> PublishedOutputs:End;
+AreEqual:equal -> SelectEventOutput2:which;
+Calculate:result -> Count:increment;
+ChangeSpeed:changedTime -> Curve:time;
+Count:count -> Curve:phase;
+Curve:value -> HoldValue:value;
+Curve:value -> MakeList2:1;
+Curve:value -> RoundUp:real;
+Curve:value -> SelectEventOutput2:in;
+Curve:value -> SelectInput:option1;
+HoldValue2:heldValue -> MakeList3:2;
+HoldValue3:heldValue -> Count4:increment;
+HoldValue:heldValue -> MakeList3:1;
+MakeDictionary:dictionary -> Calculate:values;
+MakeList2:list -> AreEqual:values;
+MakeList3:list -> MakeDictionary:values;
+MakeList4:list -> MakeDictionary:keys;
+MeasureTime2:elapsedTime -> ChangeSpeed:time;
+PublishedInputs:Duration -> Curve:duration;
+PublishedInputs:Duration -> ShareValue:value;
+PublishedInputs:Jump -> ShareEvent:event;
+PublishedInputs:JumpHowMuch -> HoldValue2:value;
+PublishedInputs:Pause -> Start2:event;
+PublishedInputs:Reset -> ShareEvent2:event;
+PublishedInputs:Speed -> ChangeSpeed:speed;
+PublishedInputs:Start -> ShareEvent4:event;
+PublishedInputs:Start -> ShareValue:value;
+PublishedInputs:Time -> MeasureTime2:time;
+RoundUp:roundedUp -> SelectInput:which;
+SelectEventOutput2:falseOption -> AllowFirstEvent:reset;
+SelectEventOutput2:trueOption -> AllowFirstEvent:event;
+SelectInput:out -> AllowChanges:value;
+ShareEvent2:sameEvent -> ChangeSpeed:reset;
+ShareEvent2:sameEvent -> Count4:setCount;
+ShareEvent2:sameEvent -> Count:setCount;
+ShareEvent2:sameEvent -> MeasureTime2:start;
+ShareEvent4:sameEvent -> MeasureTime2:start;
+ShareEvent:sameEvent -> Calculate:expression;
+ShareEvent:sameEvent -> HoldValue2:update;
+ShareEvent:sameEvent -> HoldValue:update;
+Start2:sameEvent -> MeasureTime2:pause;
+}

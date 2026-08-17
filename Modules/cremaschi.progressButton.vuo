@@ -1,0 +1,84 @@
+/**
+ * @file
+ * @brief ProgressButton
+ *
+ * @author [cremaschi](https://vuo.org/user/599)
+ * @createdInVuoVersion 2.4.2
+ * @lastSavedInVuoVersion 2.4.2
+ * @copyright Copyright © 2023 [cremaschi](https://vuo.org/user/599)
+ * @see This is a Vuo Composition source code file.  See https://vuo.org for further information.
+ */
+
+digraph G
+{
+AllowChanges [type="vuo.event.allowChanges2.VuoImage" version="2.0.0" label="Allow Changes|<refresh>refresh\l|<value>value\l|<changedValue>changedValue\r" pos="855,1035"];
+Calculate [type="vuo.math.calculate" version="1.0.0" label="Calculate|<refresh>refresh\l|<expression>expression\l|<values>values\l|<result>result\r" pos="60,420" _expression="\{\"expressions\":[\"A - (2* border)\"],\"inputVariables\":[\"A\",\"border\"],\"outputVariables\":[\"result\"]\}"];
+Calculate2 [type="vuo.math.calculate" version="1.0.0" label="Calculate|<refresh>refresh\l|<expression>expression\l|<values>values\l|<result>result\r" pos="-90,600" _expression="\{\"expressions\":[\"(width)-(2*border)\"],\"inputVariables\":[\"border\",\"width\"],\"outputVariables\":[\"result\"]\}"];
+Calculate5 [type="vuo.math.calculate" version="1.0.0" label="Calculate|<refresh>refresh\l|<expression>expression\l|<values>values\l|<result>result\r" pos="-180,-90" _expression="\{\"expressions\":[\"a*2\"],\"inputVariables\":[\"a\"],\"outputVariables\":[\"result\"]\}"];
+CombineLayers [type="vuo.layer.combine.group" version="1.0.0" label="Combine Layers|<refresh>refresh\l|<layers>layers\l|<combinedLayer>combinedLayer\r" pos="585,330"];
+ConvertImageToLayer2 [type="vuo.type.image.layer" version="1.0.0" label="Convert Image to Layer|<refresh>refresh\l|<image>image\l|<layer>layer\r" pos="645,450"];
+CropImage [type="vuo.image.crop" version="1.1.2" label="Crop Image|<refresh>refresh\l|<image>image\l|<center>center\l|<width>width\l|<height>height\l|<croppedImage>croppedImage\r" pos="705,1035" _center="\{\"x\":-1.0,\"y\":0.0\}" _height="2.0"];
+GetChildLayers [type="vuo.layer.get.child" version="1.0.0" label="Get Child Layers|<refresh>refresh\l|<layer>layer\l|<childLayers>childLayers\r" pos="540,1095"];
+GetLayerBounds [type="vuo.layer.bounds" version="1.0.0" label="Get Layer Bounds|<refresh>refresh\l|<layer>layer\l|<center>center\r|<width>width\r|<height>height\r" pos="285,1155"];
+HoldValue [type="vuo.data.hold2.VuoLayer" version="3.0.0" label="Hold Value|<refresh>refresh\l|<update>update\l|<value>value\l|<heldValue>heldValue\r" pos="810,810"];
+HoldValue2 [type="vuo.data.hold2.VuoImage" version="3.0.0" label="Hold Value|<refresh>refresh\l|<update>update\l|<value>value\l|<heldValue>heldValue\r" pos="990,885"];
+MakeActionButton [type="vuo.ui.make.button" version="1.0.0" label="Make Action Button inactive|<refresh>refresh\l|<window>window\l|<label>label\l|<anchor>anchor\l|<position>position\l|<theme>theme\l|<updatedLayer>updatedLayer\r|<pressed>pressed\r" pos="120,840" _anchor="\{\"horizontalAlignment\":\"center\",\"verticalAlignment\":\"center\"\}" _updatedLayer_eventThrottling="enqueue" _pressed_eventThrottling="enqueue"];
+MakeActionButtonInactive2 [type="vuo.ui.make.button" version="1.0.0" label="Make Action Button active|<refresh>refresh\l|<window>window\l|<label>label\l|<anchor>anchor\l|<position>position\l|<theme>theme\l|<updatedLayer>updatedLayer\r|<pressed>pressed\r" pos="60,1035" _anchor="\{\"horizontalAlignment\":\"center\",\"verticalAlignment\":\"center\"\}" _updatedLayer_eventThrottling="enqueue" _pressed_eventThrottling="enqueue"];
+MakeDictionary [type="vuo.dictionary.make.VuoText.VuoReal" version="1.0.0" label="Make Dictionary|<refresh>refresh\l|<keys>keys\l|<values>values\l|<dictionary>dictionary\r" pos="-165,465"];
+MakeDictionary2 [type="vuo.dictionary.make.VuoText.VuoReal" version="1.0.0" label="Make Dictionary|<refresh>refresh\l|<keys>keys\l|<values>values\l|<dictionary>dictionary\r" pos="-315,585"];
+MakeDictionary5 [type="vuo.dictionary.make.VuoText.VuoReal" version="1.0.0" label="Make Dictionary|<refresh>refresh\l|<keys>keys\l|<values>values\l|<dictionary>dictionary\r" pos="-435,150"];
+MakeList [type="vuo.list.make.2.VuoReal" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="5,446"];
+MakeList12 [type="vuo.list.make.1.VuoReal" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<list>list\r" pos="-212,-64"];
+MakeList13 [type="vuo.list.make.1.VuoText" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<list>list\r" pos="-435,150" _1="\"a\""];
+MakeList2 [type="vuo.list.make.2.VuoText" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="-165,465" _1="\"A\"" _2="\"border\""];
+MakeList3 [type="vuo.list.make.2.VuoReal" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="-145,626"];
+MakeList4 [type="vuo.list.make.2.VuoText" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="-315,585" _1="\"border\"" _2="\"width\""];
+MakeList7 [type="vuo.list.make.2.VuoLayer" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<2>2\l|<list>list\r" pos="552,341"];
+RenderLayersToImage [type="vuo.layer.render.image2" version="2.0.0" label="Render Layers to Image|<refresh>refresh\l|<layers>layers\l|<width>width\l|<height>height\l|<colorDepth>colorDepth\l|<multisampling>multisampling\l|<image>image\r" pos="450,990" _colorDepth="\"8bpc\"" _multisampling="\"4\""];
+Round [type="vuo.math.round" version="2.0.0" label="Round|<refresh>refresh\l|<real>real\l|<rounded>rounded\r" pos="525,1155"];
+Round2 [type="vuo.math.round" version="2.0.0" label="Round|<refresh>refresh\l|<real>real\l|<rounded>rounded\r" pos="525,1170"];
+ShareValue4 [type="vuo.data.share.VuoPoint2d" version="1.0.0" label="Share Value|<refresh>refresh\l|<value>value\l|<sameValue>sameValue\r" pos="-465,30"];
+PublishedInputs [type="vuo.in" label="PublishedInputs|<Amount>Amount\r|<Center>Center\r|<inactivetheme>inactivetheme\r|<activetheme>activetheme\r|<Window>Window\r|<Label>Label\r" _Amount_type="VuoReal" _Amount="0.0" _Center_type="VuoPoint2d" _Center="\{\"x\":0.0,\"y\":0.0\}" _inactivetheme_type="VuoUiTheme" _activetheme_type="VuoUiTheme" _Window_type="VuoRenderedLayers" _Label_type="VuoText" _Label="\"Tweet\""];
+PublishedOutputs [type="vuo.out" label="PublishedOutputs|<CombinedLayer>CombinedLayer\l" _CombinedLayer_type="VuoLayer"];
+
+AllowChanges:changedValue -> HoldValue2:value;
+Calculate5:result -> CropImage:width;
+CombineLayers:combinedLayer -> PublishedOutputs:CombinedLayer;
+ConvertImageToLayer2:layer -> MakeList7:2;
+CropImage:croppedImage -> AllowChanges:value;
+GetChildLayers:childLayers -> RenderLayersToImage:layers;
+GetLayerBounds:height -> Round2:real;
+GetLayerBounds:width -> Round:real;
+HoldValue2:heldValue -> ConvertImageToLayer2:image;
+HoldValue:heldValue -> MakeList7:1;
+MakeActionButton:updatedLayer -> HoldValue:value;
+MakeActionButtonInactive2:updatedLayer -> GetChildLayers:layer;
+MakeActionButtonInactive2:updatedLayer -> GetLayerBounds:layer;
+MakeDictionary2:dictionary -> Calculate2:values;
+MakeDictionary5:dictionary -> Calculate5:values;
+MakeDictionary:dictionary -> Calculate:values;
+MakeList12:list -> MakeDictionary5:values;
+MakeList13:list -> MakeDictionary5:keys;
+MakeList2:list -> MakeDictionary:keys;
+MakeList3:list -> MakeDictionary2:values;
+MakeList4:list -> MakeDictionary2:keys;
+MakeList7:list -> CombineLayers:layers;
+MakeList:list -> MakeDictionary:values;
+PublishedInputs:Amount -> MakeList12:1;
+PublishedInputs:Amount -> ShareValue4:value [event=true];
+PublishedInputs:Center -> ShareValue4:value;
+PublishedInputs:Label -> MakeActionButton:label;
+PublishedInputs:Label -> MakeActionButtonInactive2:label;
+PublishedInputs:Window -> HoldValue2:update;
+PublishedInputs:Window -> HoldValue:update;
+PublishedInputs:Window -> MakeActionButton:window;
+PublishedInputs:Window -> MakeActionButtonInactive2:window;
+PublishedInputs:Window -> MakeList12:1 [event=true];
+PublishedInputs:activetheme -> MakeActionButtonInactive2:theme;
+PublishedInputs:inactivetheme -> MakeActionButton:theme;
+RenderLayersToImage:image -> CropImage:image;
+Round2:rounded -> RenderLayersToImage:height;
+Round:rounded -> RenderLayersToImage:width;
+ShareValue4:sameValue -> MakeActionButton:position;
+ShareValue4:sameValue -> MakeActionButtonInactive2:position;
+}

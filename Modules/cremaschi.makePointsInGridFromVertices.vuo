@@ -1,0 +1,86 @@
+/**
+ * @file
+ * @brief MakePointsInGridFromVertices
+ *
+ * @author [cremaschi](https://vuo.org/user/599)
+ * @createdInVuoVersion 2.4.0
+ * @lastSavedInVuoVersion 2.4.0
+ * @copyright Copyright © 2022 [cremaschi](https://vuo.org/user/599)
+ * @see This is a Vuo Composition source code file.  See https://vuo.org for further information.
+ */
+
+digraph G
+{
+AppendLists [type="vuo.list.append.VuoPoint2d" version="1.0.1" label="Append Lists|<refresh>refresh\l|<list1>list1\l|<list2>list2\l|<combinedList>combinedList\r" pos="813,528" fillcolor="violet"];
+Calculate [type="vuo.math.calculate" version="1.0.0" label="Calculate|<refresh>refresh\l|<expression>expression\l|<values>values\l|<result>result\r" pos="-29,566" fillcolor="violet" _expression="\{\"expressions\":[\"a+1\"],\"inputVariables\":[\"a\"],\"outputVariables\":[\"result\"]\}"];
+Count [type="vuo.math.count.VuoReal" version="1.0.0" label="Count|<refresh>refresh\l|<increment>increment\l|<decrement>decrement\l|<setCount>setCount\l|<count>count\r" pos="-191,635" fillcolor="violet" _increment="1.0" _decrement="1.0" _setCount="0.0"];
+CountItemsInList4 [type="vuo.list.count.VuoPoint2d" version="1.0.0" label="Count Items in List|<refresh>refresh\l|<list>list\l|<itemCount>itemCount\r" pos="404,303"];
+GetItemFromList [type="vuo.list.get.VuoPoint2d" version="1.0.1" label="Get Item from List|<refresh>refresh\l|<list>list\l|<which>which\l|<item>item\r" pos="255,564" fillcolor="violet"];
+HoldList2 [type="vuo.data.hold.list2.VuoPoint2d" version="2.0.0" label="Hold List|<refresh>refresh\l|<update>update\l|<value>value\l|<heldValue>heldValue\r" pos="93,298" fillcolor="violet"];
+HoldList4 [type="vuo.data.hold.list2.VuoPoint2d" version="2.0.0" label="Hold List|<refresh>refresh\l|<update>update\l|<value>value\l|<heldValue>heldValue\r" pos="658,76" fillcolor="violet"];
+HoldList5 [type="vuo.data.hold.list2.VuoPoint2d" version="2.0.0" label="Hold List|<refresh>refresh\l|<update>update\l|<value>value\l|<heldValue>heldValue\r" pos="944,130"];
+HoldValue [type="vuo.data.hold2.VuoInteger" version="3.0.0" label="Hold Value|<refresh>refresh\l|<update>update\l|<value>value\l|<heldValue>heldValue\r" pos="260,680" fillcolor="violet"];
+IsRealNonzero [type="vuo.type.real.boolean" version="1.0.0" label="Is Real Nonzero|<refresh>refresh\l|<real>real\l|<boolean>boolean\r" pos="66,741"];
+MakeDictionary [type="vuo.dictionary.make.VuoText.VuoReal" version="1.0.0" label="Make Dictionary|<refresh>refresh\l|<keys>keys\l|<values>values\l|<dictionary>dictionary\r" pos="-156,832"];
+MakeList [type="vuo.list.make.0.VuoPoint2d" version="2.0.0" label="Make List|<refresh>refresh\l|<list>list\r" pos="561,288" fillcolor="violet"];
+MakeList2 [type="vuo.list.make.1.VuoText" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<list>list\r" pos="-156,832" _1="\"a\""];
+MakeList3 [type="vuo.list.make.1.VuoReal" version="2.0.0" label="Make List|<refresh>refresh\l|<1>1\l|<list>list\r" pos="-61,592" fillcolor="violet"];
+MakePointsAlongLine [type="vuo.point.make.curve.VuoPoint2d" version="1.0.0" label="Make Points along Line left|<refresh>refresh\l|<startPosition>startPosition\l|<endPosition>endPosition\l|<curve>curve\l|<easing>easing\l|<numberOfPoints>numberOfPoints\l|<points>points\r" pos="-255,29" _curve="\"linear\"" _easing="\"in\""];
+MakePointsAlongLine2 [type="vuo.point.make.curve.VuoPoint2d" version="1.0.0" label="Make Points along Line right|<refresh>refresh\l|<startPosition>startPosition\l|<endPosition>endPosition\l|<curve>curve\l|<easing>easing\l|<numberOfPoints>numberOfPoints\l|<points>points\r" pos="-261,195" _curve="\"linear\"" _easing="\"in\""];
+MakePointsAlongLineLeft2 [type="vuo.point.make.curve.VuoPoint2d" version="1.0.0" label="Make Points along Line left|<refresh>refresh\l|<startPosition>startPosition\l|<endPosition>endPosition\l|<curve>curve\l|<easing>easing\l|<numberOfPoints>numberOfPoints\l|<points>points\r" pos="460,550" fillcolor="violet" _curve="\"linear\"" _easing="\"in\""];
+ProcessList [type="vuo.list.process.VuoPoint2d.VuoInteger" version="1.0.1" label="Process List|<refresh>refresh\l|<fire>fire\l|<processedItem>processedItem\l|<processedList>processedList\r|<processItem>processItem\r" pos="312,145" fillcolor="violet" _processedList_eventThrottling="enqueue" _processItem_eventThrottling="enqueue"];
+Round [type="vuo.math.round" version="2.0.0" label="Round|<refresh>refresh\l|<real>real\l|<rounded>rounded\r" pos="325,638"];
+Round3 [type="vuo.math.round" version="2.0.0" label="Round|<refresh>refresh\l|<real>real\l|<rounded>rounded\r" pos="837,384"];
+SelectInputList [type="vuo.select.in.list.2.VuoPoint2d" version="2.0.0" label="Select Input List|<refresh>refresh\l|<which>which\l|<option1>option1\l|<option2>option2\l|<out>out\r" pos="608,262" fillcolor="violet"];
+SelectOutput2 [type="vuo.select.out.boolean.VuoReal" version="2.0.0" label="Select Output|<refresh>refresh\l|<which>which\l|<in>in\l|<falseOption>falseOption\r|<trueOption>trueOption\r" pos="-14,682" fillcolor="violet"];
+ShareList [type="vuo.data.share.list.VuoPoint2d" version="1.0.0" label="Share List|<refresh>refresh\l|<value>value\l|<sameValue>sameValue\r" pos="6,126"];
+PublishedInputs [type="vuo.in" label="PublishedInputs|<UpLeft>UpLeft\r|<UpRight>UpRight\r|<LowLeft>LowLeft\r|<LowRight>LowRight\r|<Rows>Rows\r|<Columns>Columns\r" _UpLeft_type="VuoPoint2d" _UpLeft="\{\"x\":-0.80000001192092896,\"y\":0.5\}" _UpRight_type="VuoPoint2d" _UpRight="\{\"x\":0.40000000596046448,\"y\":0.10000000149011612\}" _LowLeft_type="VuoPoint2d" _LowLeft="\{\"x\":-0.80000001192092896,\"y\":-0.44999998807907104\}" _LowRight_type="VuoPoint2d" _LowRight="\{\"x\":0.82999998331069946,\"y\":-0.86000001430511475\}" _Rows_type="VuoInteger" _Rows="8" _Columns_type="VuoInteger" _Columns="16"];
+PublishedOutputs [type="vuo.out" label="PublishedOutputs|<Points>Points\l" _Points_type="VuoList_VuoPoint2d"];
+
+AppendLists:combinedList -> CountItemsInList4:list;
+AppendLists:combinedList -> HoldList4:value;
+Calculate:result -> Round3:real;
+Count:count -> IsRealNonzero:real;
+Count:count -> MakeList3:1;
+Count:count -> SelectOutput2:in;
+CountItemsInList4:itemCount -> ProcessList:processedItem;
+GetItemFromList:item -> MakePointsAlongLineLeft2:endPosition;
+HoldList2:heldValue -> GetItemFromList:list;
+HoldList4:heldValue -> HoldList5:value;
+HoldList4:heldValue -> SelectInputList:option2;
+HoldList5:heldValue -> PublishedOutputs:Points;
+HoldValue:heldValue -> MakePointsAlongLineLeft2:numberOfPoints;
+IsRealNonzero:boolean -> SelectOutput2:which;
+MakeDictionary:dictionary -> Calculate:values;
+MakeList2:list -> MakeDictionary:keys;
+MakeList3:list -> MakeDictionary:values;
+MakeList:list -> SelectInputList:option1;
+MakePointsAlongLine2:points -> HoldList2:value;
+MakePointsAlongLine2:points -> ShareList:value [event=true];
+MakePointsAlongLine:points -> ShareList:value;
+MakePointsAlongLineLeft2:points -> AppendLists:list2;
+MakePointsAlongLineLeft2:points -> HoldList4:update;
+ProcessList:processItem -> Count:increment [event=true];
+ProcessList:processItem -> HoldList2:update;
+ProcessList:processItem -> HoldValue:update;
+ProcessList:processItem -> MakePointsAlongLineLeft2:startPosition;
+ProcessList:processedList -> Count:setCount [event=true];
+ProcessList:processedList -> HoldList4:update;
+ProcessList:processedList -> HoldList5:update;
+PublishedInputs:Columns -> HoldValue:value;
+PublishedInputs:Columns -> MakePointsAlongLine2:startPosition [event=true];
+PublishedInputs:Columns -> MakePointsAlongLine:numberOfPoints [event=true];
+PublishedInputs:LowLeft -> MakePointsAlongLine:endPosition;
+PublishedInputs:LowRight -> MakePointsAlongLine2:endPosition;
+PublishedInputs:Rows -> MakePointsAlongLine2:numberOfPoints;
+PublishedInputs:Rows -> MakePointsAlongLine:numberOfPoints;
+PublishedInputs:UpLeft -> MakePointsAlongLine2:startPosition [event=true];
+PublishedInputs:UpLeft -> MakePointsAlongLine:startPosition;
+PublishedInputs:UpRight -> MakePointsAlongLine2:startPosition;
+PublishedInputs:UpRight -> MakePointsAlongLine:startPosition [event=true];
+Round3:rounded -> SelectInputList:which;
+Round:rounded -> GetItemFromList:which;
+SelectInputList:out -> AppendLists:list1;
+SelectOutput2:trueOption -> Round:real;
+ShareList:sameValue -> ProcessList:fire;
+}
