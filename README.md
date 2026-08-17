@@ -1,6 +1,6 @@
 # ISOTTA (Intelligent System for Organic Tweeting and Thoughtful Artistry)
 
-!(Isotta trento foto mic.jpg)
+![Isotta](Isotta.jpg)
 
 ISOTTA is a critical design vintage artifact designed to act as a co-creative writing partner for Twitter users. It embodies slow technology principles to highlight the productivity disparities between humans and computers, fostering a discussion on the implications of Human-AI interaction.
 
